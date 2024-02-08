@@ -1,0 +1,39 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-pokemoncollection-dev-124849-authRole",
+      "UnauthRoleArn": "arn:aws:iam::633263412160:role/amplify-pokemoncollection-dev-124849-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::633263412160:role/amplify-pokemoncollection-dev-124849-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-pokemoncollection-dev-124849-deployment",
+      "UnauthRoleName": "amplify-pokemoncollection-dev-124849-unauthRole",
+      "StackName": "amplify-pokemoncollection-dev-124849",
+      "StackId": "arn:aws:cloudformation:us-west-2:633263412160:stack/amplify-pokemoncollection-dev-124849/98e31460-c45f-11ee-bed0-068111e02d63",
+      "AmplifyAppId": "d386oe4f4vca6w",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-pokemoncollection-dev-124849-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "function": {
+        "pokemoncollection": {
+          "deploymentBucketName": "amplify-pokemoncollection-dev-124849-deployment",
+          "s3Key": "amplify-builds/pokemoncollection-344971326a584a49362b-build.zip"
+        }
+      },
+      "auth": {
+        "pokemoncollection": {}
+      },
+      "storage": {
+        "pokemoncollection": {}
+      },
+      "api": {
+        "pokemoncollection": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d386oe4f4vca6w",
+          "type": "manual"
+        }
+      }
+    }
+  }
+}

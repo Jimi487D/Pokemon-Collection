@@ -1,0 +1,74 @@
+/* Center the welcome message */
+h1 {
+  text-align: center;
+  font-size: 32px; /* Larger font size for a more prominent welcome */
+  margin-bottom: 30px; /* Add some space below the welcome message */
+  color: #333; /* Darker color for better readability */
+}
+
+/* Set background gradient */
+body {
+  background: linear-gradient(to bottom,#e5f4fd, #ffeded); /* Gradient from light pink to light blue */
+}
+
+/* Center the Pokémon cards container */
+.pokemon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px; /* Limit the width of the Pokémon container */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+/* Set styles for Pokémon cards */
+.pokemon-card {
+  text-align: center;
+  border-radius: 10px; /* Add rounded corners for a more modern look */
+  background-color: #f0f0f0; /* Light gray background color */
+  padding: 10px; /* Add some padding to the cards */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+  transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+/* Set a maximum width for Pokémon images to make them smaller */
+.pokemon-card img {
+  max-width: 100%; /* Adjust the maximum width as needed */
+  height: auto; /* Maintain aspect ratio */
+  cursor: pointer;
+  border-radius: 20px; /* Make the images less oval */
+}
+
+/* Set up grid layout for Pokémon cards */
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Display five Pokémon in a row */
+  gap: 20px;
+}
+
+/* Apply grayscale filter to Pokémon images when unobtained */
+.black-and-white img {
+  filter: grayscale(100%);
+}
+
+/* Style for the sign-out button */
+.sign-out-button {
+  background-color: #ff6347; /* Coral color for the button */
+  color: #fff; /* White text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add some rounding to the corners */
+  padding: 10px 20px; /* Add padding to make the button larger */
+  font-size: 16px; /* Increase font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition effect for background color */
+}
+
+/* Hover effect for the sign-out button */
+.sign-out-button:hover {
+  background-color: #ff4c2c; /* Darker coral color on hover */
+}
+
+/* Positioning for the sign-out button */
+.sign-out-button-container {
+  margin-top: 20px; /* Add some space above the button */
+  text-align: center; /* Center the button horizontally */
+}

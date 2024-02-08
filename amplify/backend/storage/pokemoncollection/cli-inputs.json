@@ -1,0 +1,14 @@
+{
+  "resourceName": "pokemoncollection",
+  "tableName": "pokemoncollection",
+  "partitionKey": {
+    "fieldName": "userID",
+    "fieldType": "string"
+  },
+  "sortKey": {
+    "fieldName": "pokemonId",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}
