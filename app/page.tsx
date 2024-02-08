@@ -11,7 +11,7 @@ import './App.css'; // Import CSS file for styling
 Amplify.configure(awsconfig);
 const apiName = 'pokemoncollection';
 const path = '/pokemon';
-
+process.env.
 function App() {
   const [pokemonData, setPokemonData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -36,7 +36,7 @@ function App() {
       let data: any = {};
       data = await body.json();
       console.log("Pokemon data:", data);
-      const sortedData = data?.userPokemonData.sort((a: any, b:any) => parseInt(a.pokemonId?.S) - parseInt(b.pokemonId?.S));
+      const sortedData = data?.userPokemonData.sort((a: any, b: any) => parseInt(a.pokemonId?.S) - parseInt(b.pokemonId?.S));
       setPokemonData(sortedData);
       setIsLoading(false);
       setError(null);
@@ -50,7 +50,7 @@ function App() {
     }
   }
 
-  async function togglePokemonObtained(pokemonId:string, isObtained:boolean) {
+  async function togglePokemonObtained(pokemonId: string, isObtained: boolean) {
     try {
       // Define the payload for updating the item
       const payload = {
@@ -73,7 +73,7 @@ function App() {
       console.error('Error toggling pokemon obtained status:', error);
     }
   }
-  
+
   // Fetch pokemon data on component mount
   useEffect(() => {
     if (!dataFetched) {
@@ -85,8 +85,8 @@ function App() {
     <>
       <h1>Welcome, Pokémon Trainer! 👋</h1>
       <div className="sign-out-button-container">
-      <button className="sign-out-button" onClick={handleSignOut}>Sign Out</button>
-    </div>
+        <button className="sign-out-button" onClick={handleSignOut}>Sign Out</button>
+      </div>
       {isLoading ? (
         <p>Loading...</p>
       ) : error ? (
@@ -96,7 +96,7 @@ function App() {
           {pokemonData.length > 0 ? (
             <div className="pokemon-container">
               <div className="pokemon-grid">
-                {pokemonData.map((pokemon:any, index) => (
+                {pokemonData.map((pokemon: any, index) => (
                   <div key={index} className={`pokemon-card ${pokemon.isObtained?.BOOL ? '' : 'black-and-white'}`} onClick={() => togglePokemonObtained(pokemon.pokemonId?.S, pokemon.isObtained?.BOOL)}>
                     <img
                       src={pokemon.imageURL?.S}
