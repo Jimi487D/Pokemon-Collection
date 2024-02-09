@@ -11,7 +11,6 @@ import './App.css'; // Import CSS file for styling
 Amplify.configure(awsconfig);
 const apiName = 'pokemoncollection';
 const path = '/pokemon';
-process.env.
 function App() {
   const [pokemonData, setPokemonData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
